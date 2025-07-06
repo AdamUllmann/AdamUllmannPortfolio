@@ -21,6 +21,7 @@ export default function ProjectCard({
   live,
   featured = false,
   className = "",
+  image,
 }: ProjectCardProps) {
   const [isHovered, setIsHovered] = useState(false);
 
@@ -40,41 +41,51 @@ export default function ProjectCard({
       )}
 
       {/* Project Image Placeholder */}
-      <div className="relative h-48 bg-gradient-to-br from-primary/10 via-purple-500/10 to-pink-500/10 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
-
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="text-6xl font-bold text-primary/20 select-none">
-            {title.charAt(0)}
-          </div>
-        </div>
-
-        {/* Hover overlay */}
-        <div
-          className={`absolute inset-0 bg-primary/90 flex items-center justify-center space-x-4 transition-opacity duration-300 ${
-            isHovered ? "opacity-100" : "opacity-0"
-          }`}
-        >
-          <a
-            href={github}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="p-3 bg-white/20 rounded-full hover:bg-white/30 transition-colors"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <Github className="w-6 h-6 text-white" />
-          </a>
-          <a
-            href={live}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="p-3 bg-white/20 rounded-full hover:bg-white/30 transition-colors"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <ExternalLink className="w-6 h-6 text-white" />
-          </a>
+      <div className="relative h-48 overflow-hidden">
+  {image ? (
+    <img
+      src={image}
+      alt={title}
+      className="w-full h-full object-cover"
+    />
+  ) : (
+    <>
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-purple-500/10 to-pink-500/10" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+      <div className="absolute inset-0 flex items-center justify-center">
+        <div className="text-6xl font-bold text-primary/20 select-none">
+          {title.charAt(0)}
         </div>
       </div>
+    </>
+  )}
+
+  {/* Hover overlay */}
+  <div
+    className={`absolute inset-0 bg-primary/90 flex items-center justify-center space-x-4 transition-opacity duration-300 ${
+      isHovered ? "opacity-100" : "opacity-0"
+    }`}
+  >
+    <a
+      href={github}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="p-3 bg-white/20 rounded-full hover:bg-white/30 transition-colors"
+      onClick={(e) => e.stopPropagation()}
+    >
+      <Github className="w-6 h-6 text-white" />
+    </a>
+    <a
+      href={live}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="p-3 bg-white/20 rounded-full hover:bg-white/30 transition-colors"
+      onClick={(e) => e.stopPropagation()}
+    >
+      <ExternalLink className="w-6 h-6 text-white" />
+    </a>
+  </div>
+</div>
 
       <div className="p-6">
         <h3 className="text-xl font-semibold mb-3 group-hover:text-primary transition-colors">

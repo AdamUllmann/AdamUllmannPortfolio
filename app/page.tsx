@@ -112,33 +112,37 @@ export default function HomePage() {
 
   const projects = [
     {
-      title: "Project 1",
-      description: "This is project 1",
-      tech: ["React", "Node.js", "PostgreSQL", "Stripe", "Redis", "Docker"],
-      github: "https://github.com",
-      live: "https://example.com",
+      title: "Stratomaster",
+      description: "All-in-one Automatic Audio Mastering Tool for real time production & post production.",
+      tech: ["C++", "Juce", "VST3"],
+      github: "https://github.com/AdamUllmann/StratoMaster",
+      live: "https://github.com/AdamUllmann/StratoMaster/releases/tag/0.3.0",
       featured: true,
+      image: "/images/StratomasterAll.png",
     },
     {
-      title: "Antoher one",
-      description: "another discription",
-      tech: ["Next.js", "Socket.io", "MongoDB", "Tailwind", "Prisma"],
-      github: "https://github.com",
-      live: "https://example.com",
+      title: "DAWdle",
+      description: "A digital audio workstation with a built-in visual node-based scripting language.",
+      tech: ["C++", "Vulkan", "Qt"],
+      github: "https://github.com/ChicoState/DAWdle",
+      live: "https://github.com/ChicoState/DAWdle/releases/tag/v1.0.0",
+      image: "/images/Dawdle.png"
     },
     {
-      title: "Antoher one",
-      description: "Antoher one",
-      tech: ["React", "D3.js", "Python", "FastAPI", "Pandas"],
-      github: "https://github.com",
-      live: "https://example.com",
+      title: "Offline Path Tracer",
+      description: "An offline path tracing 3D renderer that leverages CUDA to efficiently generate photorealistic renders of scenes using the GPU.",
+      tech: ["C++", "CUDA", "Python"],
+      github: "https://github.com/AdamUllmann/offline-path-tracer",
+      live: "https://github.com/AdamUllmann/offline-path-tracer",
+      image: "/images/Pathtracer.png"
     },
     {
-      title: "Antoher one",
-      description: "Antoher one",
-      tech: ["Next.js", "OpenAI", "WebSocket", "Supabase"],
-      github: "https://github.com",
-      live: "https://example.com",
+      title: "ModuSuite",
+      description: "My comprehensive collection of digital audio plugins for DAWs. Providing users with a versatile set of tools to shape and manipulate their sound.",
+      tech: ["C++", "Juce", "VST3"],
+      github: "https://github.com/AdamUllmann/ModuSuite",
+      live: "https://adamullmann.github.io/ModuSuite/",
+      image: "/images/Modusuite.png"
     },
   ];
 
@@ -146,37 +150,40 @@ export default function HomePage() {
     {
       title: "Software Engineer",
       company: "AJA Video Systems",
-      period: "2024 - Present",
+      period: "May 2024 - Present",
       description:
-        "Led development of microservices architecture serving 1M+ users, mentored 5 junior developers, and improved system performance by 40%. Architected scalable solutions using React, Node.js, and AWS.",
+        "Designing and developing software applications and tools that integrate seamlessly with AJA’s high-end video and audio hardware. Contributing to features that enhance workflows for broadcasters, film and television production, and live event streaming. Collaborating with cross-functional teams to deliver high-performance, cross-platform solutions used worldwide in demanding professional video environments.",
       achievements: [
-        "40% performance improvement",
-        "Led team of 8 developers",
-        "99.9% uptime achieved",
+        "Embedded Systems",
+        "Linux Development",
+        "C++ Programming",
+        "Hardware Debugging",
       ],
     },
     {
-      title: "Full Stack Developer",
-      company: "StartupXYZ",
-      period: "2020 - 2022",
+      title: "IT Support Specialist",
+      company: "Academic Technologies, CSU Chico",
+      period: "May 2022 - May 2025",
       description:
-        "Built scalable web applications from scratch, implemented CI/CD pipelines reducing deployment time by 60%, and collaborated with cross-functional teams to deliver features ahead of schedule.",
+        "Provided remote technical support to university faculty through a Zoom-based IT help desk, documented support tickets, and maintained departmental web resources. Assisted with the university’s transition from Blackboard to Canvas as the primary Learning Management System.",
       achievements: [
-        "60% faster deployments",
-        "15+ features delivered",
-        "Zero-downtime migrations",
+        "Remote Support",
+        "Ticket Tracking",
+        "Website Maintenance",
+        "Canvas Migration",
       ],
     },
     {
-      title: "Frontend Developer",
-      company: "Digital Agency",
-      period: "2018 - 2020",
+      title: "Programming Lab Assistant",
+      company: "College of Engineering, CSU Chico",
+      period: "January 2023 - May 2023",
       description:
-        "Developed responsive web applications for 20+ clients, optimized performance achieving 95+ Lighthouse scores, and worked closely with designers to implement pixel-perfect UIs.",
+        "Supported computer science students in programming labs, helping them navigate UNIX/Linux environments, debug code, and understand advanced programming topics in C++. Provided guidance on data structures, algorithms, and computational problem-solving techniques.",
       achievements: [
-        "95+ Lighthouse scores",
-        "20+ client projects",
-        "100% client satisfaction",
+        "Linux Assistance",
+        "C++ Guidance",
+        "Data Structures",
+        "Algorithm Tutoring",
       ],
     },
   ];
@@ -272,12 +279,14 @@ export default function HomePage() {
 
         <div className="text-center max-w-4xl mx-auto">
           <div className="mb-8">
-            <div className="w-32 h-32 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 mx-auto mb-6 flex items-center justify-center text-white text-4xl font-bold shadow-2xl animate-pulse">
-              AU
-            </div>
+            <img
+  src="/images/Headshot.jpg"
+  alt="Adam Ullmann Headshot"
+  className="w-32 h-32 rounded-full object-cover mx-auto mb-6 shadow-2xl animate-pulse"
+/>
           </div>
           <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent animate-fade-in h-[77px]">
-            Software Engineer
+            Adam Ullmann
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
             Passionate about creating innovative solutions and building scalable
@@ -337,13 +346,13 @@ export default function HomePage() {
             <div className="space-y-6">
               <p className="text-lg text-muted-foreground leading-relaxed">
                 I&apos;m a passionate software engineer with over 5 years of
-                experience building web applications and scalable systems. I
+                experience building cross-platform applications and scalable systems. I
                 love solving complex problems and turning innovative ideas into
                 reality through clean, efficient code.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed">
                 My expertise spans full-stack development, with a strong focus
-                on modern JavaScript frameworks, cloud technologies, and best
+                on modern distributed systems, cloud technologies, and best
                 practices in software architecture. I believe in writing code
                 that&apos;s not just functional, but maintainable and scalable.
               </p>
@@ -373,7 +382,7 @@ export default function HomePage() {
               <ul className="space-y-4 text-muted-foreground">
                 <li className="flex items-center">
                   <GraduationCap className="w-5 h-5 text-primary mr-3" />
-                  Computer Science Degree
+                  BS in Computer Science (Summa Cum Laude)
                 </li>
                 <li className="flex items-center">
                   <Briefcase className="w-5 h-5 text-primary mr-3" />
@@ -387,11 +396,11 @@ export default function HomePage() {
                 </li>
                 <li className="flex items-center">
                   <Globe className="w-5 h-5 text-primary mr-3" />
-                  Remote Work Enthusiast
+                  Parallel Programming Enthusiast
                 </li>
                 <li className="flex items-center">
-                  <span className="text-primary mr-3">☕</span>
-                  Coffee Addict & Problem Solver
+                  <span className="text-primary mr-3">🎵</span>
+                  Music Lover & Problem Solver
                 </li>
               </ul>
             </div>
@@ -522,6 +531,7 @@ export default function HomePage() {
                 github={project.github}
                 live={project.live}
                 featured={project.featured}
+                image={project.image}
               />
             ))}
           </div>

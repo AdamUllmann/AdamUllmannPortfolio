@@ -5,13 +5,9 @@ import Image from "next/image";
 export default function SkillsCarousel({
   skills,
   selectedSkill,
-  setSelectedSkill
+  setSelectedSkill,
 }: {
-  skills: {
-    name: string;
-    image: string;
-    description: string;
-  }[];
+  skills: { name: string; image: string; description: string }[];
   selectedSkill: any;
   setSelectedSkill: (skill: any) => void;
 }) {
@@ -20,9 +16,9 @@ export default function SkillsCarousel({
       <div
         className="bg-neutral-30 rounded-3xl pt-10 pb-14 relative w-full max-w-5xl overflow-hidden shadow-lg"
         style={{
-          background: 'rgba(0, 0, 0, 0.1)',
-          backdropFilter: 'blur(15px)',
-          WebkitBackdropFilter: 'blur(15px)',
+          background: "rgba(0, 0, 0, 0.1)",
+          backdropFilter: "blur(15px)",
+          WebkitBackdropFilter: "blur(15px)",
         }}
       >
         <h2 className="text-center text-white mb-8 font-heading text-4xl font-bold">
@@ -46,6 +42,7 @@ export default function SkillsCarousel({
                         src={skill.image}
                         alt={skill.name}
                       />
+
                       <p className="text-white text-base lg:text-lg mt-2 truncate text-neutral-10">
                         {skill.name}
                       </p>
@@ -72,6 +69,7 @@ export default function SkillsCarousel({
                         src={skill.image}
                         alt={skill.name}
                       />
+
                       <p className="text-white text-base lg:text-lg mt-2 truncate text-neutral-10">
                         {skill.name}
                       </p>
@@ -92,11 +90,11 @@ export default function SkillsCarousel({
             <div
               className="rounded-xl p-6 max-w-md w-full shadow-lg"
               style={{
-                background: 'rgba(0, 0, 0, 0.7)',
-                backdropFilter: 'blur(15px)',
-                textAlign: 'center',
+                background: "rgba(0, 0, 0, 0.7)",
+                backdropFilter: "blur(15px)",
+                textAlign: "center",
               }}
-              onClick={e => e.stopPropagation()}
+              onClick={(e) => e.stopPropagation()}
             >
               <h3 className="text-2xl font-bold text-white mb-4">
                 {selectedSkill.name}

@@ -487,10 +487,10 @@ export default function HomePage() {
                 }}
                 onClick={(e) => e.stopPropagation()}
               >
-                <h3 className="text-2xl font-bold text-neutral-900 dark:text-white mb-4">
+                <h3 className="text-2xl font-bold text-white dark:text-white mb-4">
                   {selectedSkill.name}
                 </h3>
-                <p className="text-neutral-900 dark:text-white">
+                <p className="text-white dark:text-white">
                   {selectedSkill.description}
                 </p>
                 <button

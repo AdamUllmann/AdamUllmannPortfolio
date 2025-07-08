@@ -21,9 +21,15 @@ import AnimatedCounter from "@/components/AnimatedCounter";
 import ProjectCard from "@/components/ProjectCard";
 //import SkillBar from "@/components/SkillBar";
 
+type Skill = {
+  name: string;
+  image: string;
+  description: string;
+};
+
 export default function HomePage() {
   const [darkMode, setDarkMode] = useState(true); // Default to dark mode
-  const [selectedSkill, setSelectedSkill] = useState(null);
+  const [selectedSkill, setSelectedSkill] = useState<Skill | null>(null);
   useEffect(() => {
     const isDark = localStorage.getItem("darkMode") === "false" ? false : true; // Default to true (dark mode)
     setDarkMode(isDark);
@@ -205,15 +211,16 @@ export default function HomePage() {
     <div className="min-h-screen text-foreground relative">
 
       {/* Subtle Background Pattern */}
-      <div className="fixed inset-0 -z-10 overflow-hidden bg-black dark:bg-white">
+      <div className="fixed inset-0 -z-10 overflow-hidden">
   <video
     autoPlay
-    muted 
+    muted
     loop
     playsInline
     className="absolute inset-0 w-full h-full object-cover dark:invert dark:grayscale"
     src="/images/background4k.mp4"
   />
+  <div className="absolute inset-0 rainbow-overlay pointer-events-none"></div>
 </div>
 
 
@@ -221,7 +228,7 @@ export default function HomePage() {
       <nav className="fixed top-0 w-full bg-background/80 backdrop-blur-md border-b border-border z-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
-            <div className="text-xl font-bold bg-gradient-to-r bg-gradient-to-r from-blue-600 via-cyan-600 to-green-600 to-primary/70 bg-clip-text text-transparent">
+            <div className="text-xl font-bold bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
               Adam Ullmann
             </div>
             <div className="hidden md:flex space-x-8">
@@ -251,7 +258,6 @@ export default function HomePage() {
           </div>
         </div>
       </nav>
-
       {/* Hero Section */}
       <section
         id="hero"
@@ -271,7 +277,7 @@ export default function HomePage() {
               className="w-32 h-32 rounded-full object-cover mx-auto mb-6 shadow-2xl animate-pulse"
             />
           </div>
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-600 via-cyan-600 to-green-600 bg-clip-text text-transparent animate-fade-in h-[77px]">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-primary to-primary bg-clip-text text-transparent animate-fade-in h-[77px]">
             Adam Ullmann
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
@@ -569,7 +575,7 @@ export default function HomePage() {
       {/* Contact Section */}
       <section id="contact" className="py-20 px-4">
         <div className={`${sectionBox} text-center`}>
-          <h2 className="text-3xl md:text-4xl font-bold mb-8 bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
+          <h2 className="text-3xl md:text-4xl font-bold mb-8 py-1 leading-normal bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
             Let&apos;s Work Together
           </h2>
           <p className="text-xl text-muted-foreground mb-12 max-w-2xl mx-auto leading-relaxed">

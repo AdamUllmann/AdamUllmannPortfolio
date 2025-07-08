@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+html, body {
+  font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  font-weight: 400;
+  line-height: 1.5;
+}
+
 :root {
     --foreground-rgb: 0, 0, 0;
     --background-start-rgb: 214, 219, 220;
@@ -103,4 +109,35 @@
 
 .marquee-reverse {
   animation: marqueeScroll 30s linear infinite reverse;
+}
+
+@keyframes rainbowShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.rainbow-overlay {
+  background: linear-gradient(
+    270deg,
+    #ff0080,
+    #ff8c00,
+    #ffff00,
+    #00ff00,
+    #00ffff,
+    #0000ff,
+    #8000ff,
+    #ff0080
+  );
+  background-size: 1600% 1600%;
+  animation: rainbowShift 30s ease infinite;
+  mix-blend-mode: overlay;
+  opacity: 0.3;
+  pointer-events: none;
 }

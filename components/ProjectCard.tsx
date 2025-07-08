@@ -11,6 +11,7 @@ interface ProjectCardProps {
   live: string;
   featured?: boolean;
   className?: string;
+  image: string;
 }
 
 export default function ProjectCard({

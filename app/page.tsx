@@ -160,7 +160,7 @@ export default function HomePage() {
 
   const experience = [
     {
-      title: "Software Engineer",
+      title: "Software Engineer I",
       company: "AJA Video Systems",
       period: "May 2024 - Present",
       description:
@@ -182,7 +182,7 @@ export default function HomePage() {
         "Remote Support",
         "Ticket Tracking",
         "Website Maintenance",
-        "Canvas Migration",
+        "Learning Management Systems",
       ],
     },
     {
@@ -192,10 +192,10 @@ export default function HomePage() {
       description:
         "Supported computer science students in programming labs, helping them navigate UNIX/Linux environments, debug code, and understand advanced programming topics in C++. Provided guidance on data structures, algorithms, and computational problem-solving techniques.",
       achievements: [
-        "Linux Assistance",
-        "C++ Guidance",
+        "Linux",
+        "C++",
         "Data Structures",
-        "Algorithm Tutoring",
+        "Algorithms",
       ],
     },
   ];
@@ -383,16 +383,15 @@ export default function HomePage() {
                 </li>
                 <li className="flex items-center">
                   <Code className="w-5 h-5 text-primary mr-3" />
-
-                  <AnimatedCounter end={50} suffix="+ Projects Completed" />
+                  Parallel computing & GPU dev enthusiast
                 </li>
                 <li className="flex items-center">
                   <Globe className="w-5 h-5 text-primary mr-3" />
-                  Parallel Programming Enthusiast
+                  Founder, Mentor, & Community Leader
                 </li>
                 <li className="flex items-center">
                   <span className="text-primary mr-3">🎵</span>
-                  Music Lover & Problem Solver
+                  Audio Tech Geek & Electronic Musician
                 </li>
               </ul>
             </div>

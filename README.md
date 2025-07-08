@@ -1,18 +1,17 @@
-# Software Engineer Portfolio
+# Adam Ullmann • Software Engineer Portfolio
 
-A modern, responsive portfolio website built with Next.js, TailwindCSS, and ShadCN components.
+A modern, high-performance portfolio website showcasing my software engineering projects, professional experience, and technical skills. Built with Next.js, Tailwind CSS, and ShadCN components.
 
 ## Features
 
-- 🌙 Dark/Light mode toggle
-- 📱 Fully responsive design
-- ⚡ Smooth animations and transitions
-- 🎯 Interactive skill bars with progress animations
-- 📊 Animated counters for statistics
-- 🎨 Modern gradient designs
-- 🔗 Social media integration
-- 📧 Contact form ready
-- 🚀 Optimized performance
+- Dark and light mode support
+- Fully responsive layout for all devices
+- Smooth animations and subtle transitions
+- Interactive skill marquee with clickable modals
+- Animated counters displaying career stats
+- Stylish gradient backgrounds and overlays
+- Social media links and contact options
+- Optimized build for fast performance
 
 ## Tech Stack
 
@@ -37,41 +36,6 @@ bun run dev
 
 3. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-## Customization
-
-### Personal Information
-Edit the following in `app/page.tsx`:
-- Name and title
-- About me description
-- Skills and proficiency levels
-- Project details
-- Work experience
-- Contact information
-
-### Styling
-- Colors and themes: `app/globals.css`
-- Component styles: Individual component files
-- Tailwind config: `tailwind.config.ts`
-
-### Components
-
-#### AnimatedCounter
-Displays animated numbers with intersection observer for performance.
-
-#### ProjectCard
-Showcases projects with hover effects, tech stack, and links.
-
-#### SkillBar
-Interactive skill bars with animated progress and proficiency levels.
-
 ## Deployment
 
-The site is ready to deploy on platforms like:
-- Vercel (recommended for Next.js)
-- Netlify
-- Railway
-- Any static hosting service
-
-## License
-
-MIT License - feel free to use this template for your own portfolio!
+Vercel

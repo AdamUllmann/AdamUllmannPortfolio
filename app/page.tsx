@@ -281,8 +281,7 @@ export default function HomePage() {
             Adam Ullmann
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
-            Passionate about creating innovative solutions and building scalable
-            applications that make a difference in people&apos;s lives.
+            Innovative, scalable solutions that yield results.
           </p>
 
           {/* Stats */}

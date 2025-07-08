@@ -42,6 +42,8 @@ export default function HomePage() {
     element?.scrollIntoView({ behavior: "smooth" });
   };
 
+  const sectionBox = "max-w-6xl mx-auto bg-white/10 dark:bg-black/20 backdrop-blur-md border border-white/10 rounded-3xl p-8 shadow-lg";
+
   const skills = [
     {
       name: "React",
@@ -113,7 +115,8 @@ export default function HomePage() {
   const projects = [
     {
       title: "Stratomaster",
-      description: "All-in-one Automatic Audio Mastering Tool for real time production & post production.",
+      description:
+        "All-in-one Automatic Audio Mastering Tool for real time production & post production.",
       tech: ["C++", "Juce", "VST3"],
       github: "https://github.com/AdamUllmann/StratoMaster",
       live: "https://github.com/AdamUllmann/StratoMaster/releases/tag/0.3.0",
@@ -122,27 +125,30 @@ export default function HomePage() {
     },
     {
       title: "DAWdle",
-      description: "A digital audio workstation with a built-in visual node-based scripting language.",
+      description:
+        "A digital audio workstation with a built-in visual node-based scripting language.",
       tech: ["C++", "Vulkan", "Qt"],
       github: "https://github.com/ChicoState/DAWdle",
       live: "https://github.com/ChicoState/DAWdle/releases/tag/v1.0.0",
-      image: "/images/Dawdle.png"
+      image: "/images/Dawdle.png",
     },
     {
       title: "Offline Path Tracer",
-      description: "An offline path tracing 3D renderer that leverages CUDA to efficiently generate photorealistic renders of scenes using the GPU.",
+      description:
+        "An offline path tracing 3D renderer that leverages CUDA to efficiently generate photorealistic renders of scenes using the GPU.",
       tech: ["C++", "CUDA", "Python"],
       github: "https://github.com/AdamUllmann/offline-path-tracer",
       live: "https://github.com/AdamUllmann/offline-path-tracer",
-      image: "/images/Pathtracer.png"
+      image: "/images/Pathtracer.png",
     },
     {
       title: "ModuSuite",
-      description: "My comprehensive collection of digital audio plugins for DAWs. Providing users with a versatile set of tools to shape and manipulate their sound.",
+      description:
+        "My comprehensive collection of digital audio plugins for DAWs. Providing users with a versatile set of tools to shape and manipulate their sound.",
       tech: ["C++", "Juce", "VST3"],
       github: "https://github.com/AdamUllmann/ModuSuite",
       live: "https://adamullmann.github.io/ModuSuite/",
-      image: "/images/Modusuite.png"
+      image: "/images/Modusuite.png",
     },
   ];
 
@@ -196,46 +202,26 @@ export default function HomePage() {
   ];
 
   return (
-    <div className="min-h-screen bg-background text-foreground relative">
+    <div className="min-h-screen text-foreground relative">
+
       {/* Subtle Background Pattern */}
-      <div className="fixed inset-0 -z-10 overflow-hidden">
-        {/* Gradient mesh background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-secondary/10" />
+      <div className="fixed inset-0 -z-10 overflow-hidden bg-black dark:bg-white">
+  <video
+    autoPlay
+    muted 
+    loop
+    playsInline
+    className="absolute inset-0 w-full h-full object-cover dark:invert dark:grayscale"
+    src="/images/background4k.mp4"
+  />
+</div>
 
-        {/* Subtle dot pattern */}
-        <div
-          className="absolute inset-0 opacity-[0.015] dark:opacity-[0.02]"
-          style={{
-            backgroundImage: `radial-gradient(circle at 1px 1px, currentColor 1px, transparent 0)`,
-            backgroundSize: "24px 24px",
-          }}
-        />
-
-        {/* Floating geometric shapes */}
-        <div className="absolute top-1/4 left-1/6 w-32 h-32 bg-primary/[0.02] dark:bg-primary/[0.03] rounded-full blur-xl animate-pulse" />
-
-        <div className="absolute top-3/4 right-1/4 w-48 h-48 bg-purple-500/[0.02] dark:bg-purple-500/[0.03] rounded-full blur-xl animate-pulse delay-1000" />
-
-        <div className="absolute bottom-1/3 left-1/3 w-24 h-24 bg-blue-500/[0.02] dark:bg-blue-500/[0.03] rounded-full blur-xl animate-pulse delay-2000" />
-
-        {/* Subtle grid lines */}
-        <div
-          className="absolute inset-0 opacity-[0.008] dark:opacity-[0.012]"
-          style={{
-            backgroundImage: `
-              linear-gradient(currentColor 1px, transparent 1px),
-              linear-gradient(90deg, currentColor 1px, transparent 1px)
-            `,
-            backgroundSize: "48px 48px",
-          }}
-        />
-      </div>
 
       {/* Navigation */}
       <nav className="fixed top-0 w-full bg-background/80 backdrop-blur-md border-b border-border z-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
-            <div className="text-xl font-bold bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
+            <div className="text-xl font-bold bg-gradient-to-r bg-gradient-to-r from-blue-600 via-cyan-600 to-green-600 to-primary/70 bg-clip-text text-transparent">
               Adam Ullmann
             </div>
             <div className="hidden md:flex space-x-8">
@@ -277,15 +263,15 @@ export default function HomePage() {
           <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl animate-pulse delay-1000"></div>
         </div>
 
-        <div className="text-center max-w-4xl mx-auto">
+        <div className={`text-center max-w-4xl mx-auto ${sectionBox}`}>
           <div className="mb-8">
             <img
-  src="/images/Headshot.jpg"
-  alt="Adam Ullmann Headshot"
-  className="w-32 h-32 rounded-full object-cover mx-auto mb-6 shadow-2xl animate-pulse"
-/>
+              src="/images/Headshot.jpg"
+              alt="Adam Ullmann Headshot"
+              className="w-32 h-32 rounded-full object-cover mx-auto mb-6 shadow-2xl animate-pulse"
+            />
           </div>
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent animate-fade-in h-[77px]">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-600 via-cyan-600 to-green-600 bg-clip-text text-transparent animate-fade-in h-[77px]">
             Adam Ullmann
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
@@ -338,7 +324,7 @@ export default function HomePage() {
 
       {/* About Section */}
       <section id="about" className="py-20 px-4">
-        <div className="max-w-6xl mx-auto">
+        <div className={sectionBox}>
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
             About Me
           </h2>
@@ -346,9 +332,9 @@ export default function HomePage() {
             <div className="space-y-6">
               <p className="text-lg text-muted-foreground leading-relaxed">
                 I&apos;m a passionate software engineer with over 5 years of
-                experience building cross-platform applications and scalable systems. I
-                love solving complex problems and turning innovative ideas into
-                reality through clean, efficient code.
+                experience building cross-platform applications and scalable
+                systems. I love solving complex problems and turning innovative
+                ideas into reality through clean, efficient code.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed">
                 My expertise spans full-stack development, with a strong focus
@@ -409,7 +395,7 @@ export default function HomePage() {
       </section>
 
       {/* Skills Section */}
-      <section id="skills" className="py-20 px-4 bg-secondary/20">
+      <section id="skills" className="py-20 px-4 bg-background/50">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
             Skills & Technologies
@@ -498,7 +484,9 @@ export default function HomePage() {
                 <h3 className="text-2xl font-bold text-neutral-900 dark:text-white mb-4">
                   {selectedSkill.name}
                 </h3>
-                <p className="text-neutral-900 dark:text-white">{selectedSkill.description}</p>
+                <p className="text-neutral-900 dark:text-white">
+                  {selectedSkill.description}
+                </p>
                 <button
                   onClick={() => setSelectedSkill(null)}
                   className="mt-4 px-4 py-2 bg-white text-black rounded hover:bg-gray-100"
@@ -513,7 +501,7 @@ export default function HomePage() {
 
       {/* Projects Section */}
       <section id="projects" className="py-20 px-4">
-        <div className="max-w-6xl mx-auto">
+        <div className={sectionBox}>
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
             Featured Projects
           </h2>
@@ -580,7 +568,7 @@ export default function HomePage() {
 
       {/* Contact Section */}
       <section id="contact" className="py-20 px-4">
-        <div className="max-w-4xl mx-auto text-center">
+        <div className={`${sectionBox} text-center`}>
           <h2 className="text-3xl md:text-4xl font-bold mb-8 bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
             Let&apos;s Work Together
           </h2>
@@ -609,11 +597,11 @@ export default function HomePage() {
       </section>
 
       {/* Footer */}
-      <footer className="py-8 px-4 border-t border-border bg-secondary/20">
+      {/*<footer className="py-8 px-4 border-t border-border bg-secondary/20">
         <div className="max-w-6xl mx-auto text-center text-muted-foreground">
           <p>&copy; 2025 Adam Ullmann. Built with Next.js & Tailwind CSS.</p>
         </div>
-      </footer>
+      </footer>*/}
     </div>
   );
 }
